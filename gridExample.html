@@ -3,13 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Grid</title>
     <style>
         .content{
             display: grid;
             border: 1px solid black;
             grid-template-columns: repeat(6,1fr);
             grid-template-rows: repeat(4,200px);
+            grid-gap: 10px;
+            /*justify-items: center;*/
         }
         .content div{
             background-color: beige;
