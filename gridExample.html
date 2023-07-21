@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .content{
+            display: grid;
+            border: 1px solid black;
+            grid-template-columns: repeat(6,1fr);
+            grid-template-rows: repeat(4,200px);
+        }
+        .content div{
+            background-color: beige;
+            border: 1px solid rebeccapurple;
+        }
+        .one{
+            grid-column: span 3;
+            background-color: aqua;
+        }
+        .two{
+            grid-column: span 2;
+        }
+        .three{
+            grid-row: span 2;
+        }
+    </style>
+</head>
+<body>
+    <div class="content">
+        <div class="one">one</div>
+        <div class="two">two</div>
+        <div class="three">three</div>
+        <div class="four">four</div>
+        <div class="five">five</div>
+        <div class="six">six</div>
+    </div>
+</body>
+</html>
