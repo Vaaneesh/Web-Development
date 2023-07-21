@@ -7,5 +7,8 @@
 }
 .container div{
     border: 2px solid red;
-    
+
+}
+.container div:nth-child(3){
+    background-color: yellow;
 }
