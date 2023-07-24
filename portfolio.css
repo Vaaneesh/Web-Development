@@ -1,7 +1,7 @@
 *{
     margin: 0;
     padding: 0;
-}
+    font-family: 'PT Serif', serif;}
 nav{
     background-color: black;
     padding: 10px;
@@ -22,5 +22,77 @@ nav ul li a:hover{
     padding-bottom: 5px;
 }
 .gradient{
+    height: 250px;
+    background: linear-gradient(to top,rgb(6, 191, 243),white);
+}
+.circle{
+    position: absolute;
+    top: 250px;
+    left: 45%;
+    width: 150px;
+    height: 150px;
+    overflow: hidden;
+    border: 3px solid rgb(249, 248, 248);
+    border-radius: 50%;
+}
+.Insta{
+    display: flex;
+    justify-content: center;
+    margin-top: 110px;
+    padding: 10px;
+}
+.InstaUser{
+    display: flex;
+    justify-content: center;
+    font: medium;
+}
+.button-center{
+    display: flex;
+    justify-content: center;
+    margin-top: 30px ;
+}
+button{
+    height: 50px;
+    width: 120px;
+    margin: 5px;
+    font-size: medium;
+    background-color: white;
+    border-radius: 10px;
+}
+.first-btn{
+    border: 1px solid gray;
+}
+.first-btn:hover{
+    text-decoration: underline;
+    color: blueviolet;
+    cursor: pointer;
+}
+.second-btn{
+    border: 1px solid gray;
+    background-color: black;
+    color: white;
+}
+.second-btn:hover{
+    text-decoration: underline;
+    cursor: pointer;
+}
+.main-content{
+    display: flex;
+}
+.content{
+    margin-top: 50px;
+    margin-left: 100px;
+    height: 200px;
+    width: 60%;
+}
+.card{
+    margin-top: 50px;
+    margin-left: 50px;
+    border: 1px solid gray;
+    padding: 15px;
+    border-radius: 10px;
+    width: 300px;
+    height: 200px;
+    box-shadow:0 2px 4px rgb(0,0,0,1);
     
 }
