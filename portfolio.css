@@ -4,9 +4,7 @@
 }
 nav{
     background-color: black;
-}
-nav ul{
-
+    padding: 10px;
 }
 nav ul li{
     display: inline-block;
@@ -16,4 +14,13 @@ nav ul li a{
     color: white;
     text-decoration: white;
     padding: 5px;
+}
+nav ul li a:hover{
+    color: black;
+    background-color: white;
+    border-radius: 5px;
+    padding-bottom: 5px;
+}
+.gradient{
+    
 }
