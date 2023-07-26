@@ -28,12 +28,25 @@ body{
 .container{
     display: grid;
     place-items: center;
-    background-color:var(--color-4) ;
 }
-@media screen and (max-width:768px) {
+@media  screen and (min-width:1025px) {
     .container{
-        display: grid;
-        place-items: center;
-        background-color: ;
+        background-color: var(--color-4);
+    }    
+}
+@media (max-width:1024px) and (min-width:768px) {
+    .container{
+        background-color: var(--color-3);
+    } 
+}
+@media (min-width:425px)and (max-width:768px) {
+    .container{
+        background-color: var(--color-1);
     }
+}
+@media  screen and (max-width:425px) {
+    .container{
+        background-color: var(--color-2);
+    }
+    
 }
