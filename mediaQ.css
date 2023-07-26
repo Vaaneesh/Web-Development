@@ -1,3 +1,9 @@
+:root{ /*css variables*/ 
+    --color-1: #cdb4db; 
+    --color-2: #fff1e6;
+    --color-3: #525252;
+    --color-4: #bee1e6;
+}
 *{
     margin: 0px;
     padding: 0px;
@@ -17,5 +23,17 @@ body{
     left: 50%;
     transform: translateX(-50%);
     color: red;
-    
+
+}
+.container{
+    display: grid;
+    place-items: center;
+    background-color:var(--color-4) ;
+}
+@media screen and (max-width:768px) {
+    .container{
+        display: grid;
+        place-items: center;
+        background-color: ;
+    }
 }
