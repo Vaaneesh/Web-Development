@@ -1,7 +1,21 @@
 *{
     margin: 0;
     padding: 0;
-    font-family: 'PT Serif', serif;}
+    font-family: 'PT Serif', serif;
+    background-color:black;
+    color: white;
+}   
+@keyframes bounce{
+    0%{
+        transform: translateY(0);
+        }
+    50%{
+        transform: translateY(-100px);
+    }
+    100%{
+        transform: translateY(0);
+        }
+    }
 nav{
     background-color: black;
     padding: 10px;
@@ -35,6 +49,9 @@ nav ul li a:hover{
     border: 3px solid rgb(249, 248, 248);
     border-radius: 50%;
 }
+.circle:hover{
+    transform: scale(1.5);
+}
 .Insta{
     display: flex;
     justify-content: center;
@@ -61,11 +78,13 @@ button{
 }
 .first-btn{
     border: 1px solid gray;
+    color: black;
 }
 .first-btn:hover{
     text-decoration: underline;
-    color: blueviolet;
+    color: black;
     cursor: pointer;
+    background-color: gray;
 }
 .second-btn{
     border: 1px solid gray;
@@ -74,6 +93,7 @@ button{
 }
 .second-btn:hover{
     text-decoration: underline;
+    color: red;
     cursor: pointer;
 }
 .main-content{
@@ -95,6 +115,25 @@ button{
     height: 200px;
     box-shadow:0 2px 4px rgb(0,0,0,1);
     
+}
+.card1{
+    margin-top: 50px;
+    margin-left: 50px;
+    border: 1px solid gray;
+    padding: 15px;
+    border-radius: 10px;
+    width: 300px;
+    height: 200px;
+    box-shadow:0 2px 4px rgb(0,0,0,1);
+    cursor: pointer;
+    color: white;
+    
+}
+
+.card1:hover{
+    animation: bounce 3s infinite;
+    animation-iteration-count: 1;
+
 }
 .end{
     display: flex;
