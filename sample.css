@@ -1,0 +1,44 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+body{
+    font-family: sans-serif;
+    font-size: 55px;
+}
+#size{
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translateX(-50%);
+    color: red;
+
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    gap: 30px;
+}
+.row{
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+}
+.b{
+    background-color: #c4c4c4;
+    border: 2px solid black;
+    width: 33.33%;
+    height: 33.33vh;
+    display: grid;
+    place-items: center;
+}
+@media screen and (max-width : 650px) {
+    #size{
+        font-size: 25px;
+    }
+    .row{
+        flex-direction: column;
+    }
+}
