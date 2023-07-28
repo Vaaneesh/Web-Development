@@ -27,7 +27,7 @@ body{
     gap: 30px;
 }
 .b{
-    background-color: #c4c4c4;
+    background-color: lightblue;
     border: 2px solid black;
     width: 33.33%;
     height: 33.33vh;
@@ -40,5 +40,6 @@ body{
     }
     .row{
         flex-direction: column;
+        place-items: center;
     }
 }
