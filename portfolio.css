@@ -116,23 +116,11 @@ button{
     box-shadow:0 2px 4px rgb(0,0,0,1);    
     background-image: radial-gradient( circle 311px at 8.6% 27.9%,  rgba(62,147,252,0.57) 12.9%, rgba(239,183,192,0.44) 91.2% );
 }
-/* .card1{
-    margin-top: 50px;
-    margin-left: 50px;
-    border: 1px solid gray;
-    padding: 15px;
-    border-radius: 10px;
-    width: 300px;
-    height: 200px;
-    box-shadow:0 2px 4px rgb(0,0,0,1);
-    cursor: pointer;    
-}
-
-.card1:hover{
-    animation: bounce 3s infinite;
+.card:hover{
+    animation: bounce 1s infinite;
     animation-iteration-count: 1;
 
-} */
+} 
 .end{
     display: flex;
     margin-left: 50px;
