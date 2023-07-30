@@ -125,3 +125,17 @@ button{
     display: flex;
     margin-left: 50px;
 }
+pre{
+    opacity: 0.7;
+}
+@media screen and (max-width:768px) {
+    .main-content{
+        flex-direction: column;
+        place-items: center;
+    }
+    .end{
+        flex-direction: column;
+        place-items: center;
+    }
+    
+}
