@@ -133,6 +133,30 @@ button{
 pre{
     opacity: 0.7;
 }
+.skills{
+    width: 100%;
+    background-color: grey;
+    border-radius: 20px;
+}
+.css,.html,.js{
+    text-align: center;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    color: white;
+    border-radius: 20px;
+}
+.html{
+    width: 80%;
+    background-color: green;
+}
+.css{
+    width: 70%;
+    background-color: red;
+}
+.js{
+    width: 65%;
+    background-color: coral;
+}
 @media screen and (max-width:768px) {
     .main-content{
         flex-direction: column;
