@@ -73,8 +73,8 @@ button{
     width: 120px;
     margin: 5px;
     font-size: medium;
-    background-color: white;
-    border-radius: 10px;
+    background-color: slategrey ; 
+    border-radius: 30%;
 }
 .first-btn{
     border: 1px solid gray;
@@ -84,7 +84,9 @@ button{
     text-decoration: underline;
     color: black;
     cursor: pointer;
-    background-color: gray;
+    /* background-color: gray; */
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+
 }
 .second-btn{
     border: 1px solid gray;
@@ -95,6 +97,9 @@ button{
     text-decoration: underline;
     color: red;
     cursor: pointer;
+    background-color: white;
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+
 }
 .main-content{
     display: flex;
