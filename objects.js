@@ -21,3 +21,11 @@ console.log(details.first)
 //deletion using dot notation
 delete details.first;
 console.log(details.first+' '+details.second)
+
+let sample={
+    "": 10,
+    ' ':20
+}
+console.log(sample);
+console.log(sample[""]);
+console.log(sample[' ']);
