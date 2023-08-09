@@ -17,5 +17,6 @@ function foo(){
         var a=30;
         console.log(a);
     }
+    foo1();
 }
-console.log(foo());
+foo();
