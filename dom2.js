@@ -20,3 +20,25 @@ console.log(nextsb);
 
 let h1parent=h1.parentElement.nextElementSibling;
 console.log(h1parent);
+
+//child Element
+let head=document.querySelector("header");
+console.log(head);
+let child=head.children;
+console.log(child);
+
+let first=head.firstChild;
+console.log(first);
+
+let ul=document.querySelector("ul");
+let str=ul.innerHTML;
+console.log(str);
+str+="<li>AI</li>";
+ul.innerHTML=str;
+
+let li=document.createElement("li");
+console.log(li);
+li.innerText="Digital Marketing";
+
+//append
+ul.append(li);
