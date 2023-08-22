@@ -46,3 +46,8 @@ ul.append(li);
 
 //for removing child->
 ul.removeChild(li);
+
+//remove()
+let heading=document.querySelector("h1");
+console.log(heading);
+heading.remove();
