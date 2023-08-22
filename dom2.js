@@ -42,3 +42,7 @@ li.innerText="Digital Marketing";
 
 //append
 ul.append(li);
+// ul.appendChild("Digital");
+
+//for removing child->
+ul.removeChild(li);
