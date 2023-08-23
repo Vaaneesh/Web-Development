@@ -15,3 +15,11 @@ function Add(){
     }
     inputText.value='';
 }
+list.addEventListener("click",function(click){
+    if(click.target.tagName==="LI"){
+        click.target.classList.toggle("checked");
+    }
+    else if(click.target.tagName==="SPAN"){
+        click.target.parentElement.remove();
+    }
+});
