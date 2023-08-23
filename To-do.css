@@ -6,7 +6,7 @@
 .container{
     width: 100%;
     min-height: 100vh;
-    background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(25,25,138,1) 25%, rgba(255,0,74,1) 100%);
+    background-image: linear-gradient(120deg, rgba(0,0,0,1) 0%, rgba(25,25,138,1) 25%, rgba(255,0,74,1) 100%);
     padding: 10px;
 }
 .to-do{
