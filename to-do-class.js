@@ -41,4 +41,8 @@ taskList.addEventListener("click",function(ev){
         let nextItem=listItem.nextElementSibling;
         taskList.insertBefore(nextItem,listItem);
     }
+    if(className=="complete"){
+        let listItem=currentElement.parentElement;
+        listItem.classList.toggle("cut");
+    }
 })
