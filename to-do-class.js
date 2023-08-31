@@ -28,4 +28,17 @@ taskList.addEventListener("click",function(ev){
         console.log(item);
         item.remove();
     }
+    if(className=="up"){
+        let listItem=currentElement.parentElement.parentElement;
+        let prevItem=listItem.previousElementSibling;
+        console.log(listItem);
+        console.log(prevItem);
+        //Insertbefore function
+        taskList.insertBefore(listItem,prevItem);
+    }
+    if(className=="down"){
+        let listItem=currentElement.parentElement.parentElement;
+        let nextItem=listItem.nextElementSibling;
+        taskList.insertBefore(nextItem,listItem);
+    }
 })
