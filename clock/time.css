@@ -1,0 +1,10 @@
+body{
+    background-color: black;
+}
+.container{
+    position:absolute;
+    top: 50%;
+    left: 50%;
+    color: aliceblue;
+    font-size: 24px;
+}
