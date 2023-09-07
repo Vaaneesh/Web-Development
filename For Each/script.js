@@ -33,3 +33,19 @@ let even_arr=arr1.filter((val,indx,arr)=>{
     if(val%2==0) return val;
 })
 console.log(even_arr);
+
+//reduce
+let sum2=arr1.reduce((acc,val,indx,arr1)=>{
+    return acc+val;
+})
+console.log(sum2);
+
+//Sort//
+let arr2=[3,21,114,5,1]; //it sorts in lexiographocal
+arr2.sort();
+console.log(arr2);
+//in order to sort we have to use comparative function
+arr2.sort(function(a,b){
+    return a-b;
+})
+console.log(arr2);
