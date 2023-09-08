@@ -3,7 +3,6 @@ const storedCart = JSON.parse(localStorage.getItem('cart'));
 
         if (storedCart && storedCart.length > 0) {
             storedCart.forEach((product, index) => {
-                // Create a list item for each product in the cart
                 const listItem = document.createElement('li');
                 listItem.innerHTML = `
                     <div class="cart-item">
@@ -18,27 +17,21 @@ const storedCart = JSON.parse(localStorage.getItem('cart'));
                     </div>
                 `;
 
-                // Add a click event listener to the delete button
                 const deleteButton = listItem.querySelector('.delete-button');
                 deleteButton.addEventListener('click', () => {
-                    // Remove one item from the cart when the delete button is clicked
                     if (product.quantity > 1) {
-                        // Decrease the quantity by 1 if there's more than one item
                         product.quantity -= 1;
                     } else {
-                        // Remove the entire product if there's only one item
                         storedCart.splice(index, 1);
                     }
-                    // Update the cart in localStorage and refresh the cart page
                     localStorage.setItem('cart', JSON.stringify(storedCart));
-                    location.reload(); // Refresh the page
+                    location.reload();
                 });
 
                 cartList.appendChild(listItem);
             });
         } else {
-            // Display a message if the cart is empty
-            const emptyCartMessage = document.createElement('p');
+           const emptyCartMessage = document.createElement('p');
             emptyCartMessage.textContent = 'Your cart is empty :(';
             cartList.appendChild(emptyCartMessage);
         }
