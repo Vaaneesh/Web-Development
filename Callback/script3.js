@@ -19,11 +19,14 @@ function upload(zip,cb){
     let newURL="http://chitkara.com/"+zip;
     setTimeout(() => {
         console.log("Uploaded at new URL=> "+newURL);
+        cb("done");
     }, 1000);
 }
 // download("http://chitkara.com/movie.mp4");
 download("http://chitkara.com/movie.mp4",function(downloadedFile){
     Compress(downloadedFile,function(zippedfile){
-        upload(zippedfile,function(){})
+        upload(zippedfile,function(msg){
+            console.log(msg);
+        })
     })
 });
