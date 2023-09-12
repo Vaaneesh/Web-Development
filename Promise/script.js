@@ -1,9 +1,9 @@
 //create
 function kalsepinaband(){
     return new Promise(function(resolve,reject){
-        let accountBalance=12000;
+        let accountBalance=1000;
         if(accountBalance<10000){
-            resolve("Thik hai bhai chodh di");
+            resolve("Thik hai bhai chodh di "+accountBalance);
         }
         else{
             reject("control kr bhai");
