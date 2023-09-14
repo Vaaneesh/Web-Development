@@ -11,13 +11,20 @@ form.addEventListener("submit",function(ev){
     if(productData.length>0){
         productData=JSON.parse(productData);
     }
+    let flag=1;
     productData.forEach((product,idx)=>{
         if(product.productId==productId.value){
             productData[idx].quantity+=quantity.value;
+            flag=0;
         }
     })
-    let newProduct={productId:productId.value,name:name.value,category:category.value,quantity:quantity.value,price:price};
-    productData.push(newProduct);
-    localStorage.setItem("products",JSON.stringify(productData));
+    if (flag==0){
+        localStorage.setItem("products",JSON.stringify(productData));
+    }
+    else{
+        let newProduct={productId:productId.value,name:name.value,category:category.value,quantity:quantity.value,price:price};
+        productData.push(newProduct);
+        localStorage.setItem("products",JSON.stringify(productData));
+    }
     form.reset();
 })

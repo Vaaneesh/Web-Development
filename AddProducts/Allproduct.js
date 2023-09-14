@@ -1,4 +1,5 @@
 let productData=localStorage.getItem("products");
+console.log(productData);
 if(productData){
     productData=JSON.parse(productData);
     container.innerHTML="";
