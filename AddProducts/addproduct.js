@@ -22,7 +22,7 @@ form.addEventListener("submit",function(ev){
         localStorage.setItem("products",JSON.stringify(productData));
     }
     else{
-        let newProduct={productId:productId.value,name:name.value,category:category.value,quantity:quantity.value,price:price};
+        let newProduct={productId:productId.value,name:name.value,category:category.value,quantity:quantity.value,price:price.value};
         productData.push(newProduct);
         localStorage.setItem("products",JSON.stringify(productData));
     }

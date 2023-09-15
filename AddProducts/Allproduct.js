@@ -1,5 +1,6 @@
 let productData=localStorage.getItem("products");
-console.log(productData);
+let container=document.querySelector(".productContainer");
+// console.log(productData);
 if(productData){
     productData=JSON.parse(productData);
     container.innerHTML="";
@@ -21,7 +22,8 @@ function createProduct(pId,n,c,q,p){
     <div class="name">${n}</div>
     <div class="category">${c}</div>
     <div class="quantity">${q}</div>
-    <div class="price">${p}</div>`
+    <div class="price">${p}</div>
+    <button class="delete">Delete</button>`;
     container.append(div);
 }
 //delete
@@ -34,9 +36,9 @@ container.addEventListener("click",function(ev){
         console.log(deleteQuantity);
         productData.forEach((product,idx)=>{
             if(product.productId==pId){
-                productData[idx].quantity=deleteQuantity;
+                productData[idx].quantity-=deleteQuantity;
             }
-        })
+        });
         localStorage.setItem("products",JSON.stringify(productData));
     }
 })
