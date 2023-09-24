@@ -16,6 +16,9 @@ nav ul{
 nav ul li{
     padding: 0 12px;
 }
+nav ul li:hover{
+    cursor: pointer;
+}
 .logo img{
     width: 50px;
     padding: 0 8px;
@@ -34,7 +37,7 @@ nav ul li{
     width: 70%;
     border-radius: 12px;
     padding: 34px;
-    background-image: url('weeknd.jpg');
+    background-image: url('weeknd_cover.jpg');
     background-size: cover;
 
 }
