@@ -8,7 +8,8 @@ let songItems=Array.from(document.getElementsByClassName('songItem'));
 let songs=[
     {songName:"The Hills",filePath:"songs/1.mp3",coverPath:"songList/L1.avif"},
     {songName:"Starboy",filePath:"songs/2.mp3",coverPath:"songList/L2.jpeg"},
-    {songName:"Creepin'",filePath:"songs/3.mp3",coverPath:"songList/L3.jpeg"}
+    {songName:"Creepin'",filePath:"songs/3.mp3",coverPath:"songList/L3.jpeg"},
+    {songName:"After Hours",filePath:"songs/4.mp3",coverPath:"songList/L4.jpeg"}
 ]
 
 songItems.forEach((element,i)=>{
