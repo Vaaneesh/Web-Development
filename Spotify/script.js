@@ -8,11 +8,13 @@ let songItems=Array.from(document.getElementsByClassName('songItem'));
 let prev=document.getElementById('previous');
 let next=document.getElementById('next');
 let masterSongname=document.getElementById("masterSongName");
+let vol_slider=document.getElementById("vol-slider");
 let songs=[
-    {songName:"The Hills - Weeknd",filePath:"songs/1.mp3",coverPath:"songList/L1.avif"},
-    {songName:"Starboy - Weeknd",filePath:"songs/2.mp3",coverPath:"songList/L2.jpeg"},
-    {songName:"Creepin' - Weeknd & Metro",filePath:"songs/3.mp3",coverPath:"songList/L3.jpeg"},
-    {songName:"After Hours - Weeknd",filePath:"songs/4.mp3",coverPath:"songList/L4.jpeg"}
+    {songName:"The Hills -The Weeknd",filePath:"songs/1.mp3",coverPath:"songList/L1.avif"},
+    {songName:"Starboy -The Weeknd",filePath:"songs/2.mp3",coverPath:"songList/L2.jpeg"},
+    {songName:"Creepin' -The Weeknd & Metro",filePath:"songs/3.mp3",coverPath:"songList/L3.jpeg"},
+    {songName:"After Hours -The Weeknd",filePath:"songs/4.mp3",coverPath:"songList/L4.jpeg"},
+    {songName:"Is there someone else? -The Weeknd",filePath:"songs/5.mp3",coverPath:"songList/L5.jpeg"}
 ]
 
 songItems.forEach((element,i)=>{
@@ -77,7 +79,7 @@ Array.from(document.getElementsByClassName('songItemPlay')).forEach((element)=>{
 })
 
 next.addEventListener('click',()=>{
-    if(songIndex>=3){
+    if(songIndex>=4){
         songIndex=0;
     }
     else{
@@ -102,6 +104,9 @@ prev.addEventListener('click',(e)=>{
     else{
         songIndex-=1;
     }
+    makeAllplays();
+    songItems[songIndex].querySelector(".songItemPlay").classList.remove('fa-play-circle');
+    songItems[songIndex].querySelector(".songItemPlay").classList.add('fa-pause-circle');
     masterSongname.innerText=songs[songIndex].songName;
     console.log("Playing prev song");
     audioElement.src=`songs/${songIndex+1}.mp3`;
@@ -110,4 +115,14 @@ prev.addEventListener('click',(e)=>{
     masterPlay.classList.remove('fa-play-circle');
     masterPlay.classList.add('fa-pause-circle');
     gif.style.opacity=1;
+})
+
+vol_slider.addEventListener("input",()=>{
+    audioElement.volume=vol_slider.value;
+    if(audioElement.volume===0){
+        document.querySelector(".vol i").classList.replace('fa-volume-high','fa-volume-xmark');
+    }
+    else{
+        document.querySelector(".vol i").classList.replace('fa-volume-xmark','fa-volume-high');
+    }
 })
