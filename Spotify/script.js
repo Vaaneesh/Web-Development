@@ -5,11 +5,14 @@ let masterPlay=document.getElementById('masterplay');
 let myProgressbar=document.getElementById('myProgressBar');
 let gif=document.getElementById('gif');
 let songItems=Array.from(document.getElementsByClassName('songItem'));
+let prev=document.getElementById('previous');
+let next=document.getElementById('next');
+let masterSongname=document.getElementById("masterSongName");
 let songs=[
-    {songName:"The Hills",filePath:"songs/1.mp3",coverPath:"songList/L1.avif"},
-    {songName:"Starboy",filePath:"songs/2.mp3",coverPath:"songList/L2.jpeg"},
-    {songName:"Creepin'",filePath:"songs/3.mp3",coverPath:"songList/L3.jpeg"},
-    {songName:"After Hours",filePath:"songs/4.mp3",coverPath:"songList/L4.jpeg"}
+    {songName:"The Hills - Weeknd",filePath:"songs/1.mp3",coverPath:"songList/L1.avif"},
+    {songName:"Starboy - Weeknd",filePath:"songs/2.mp3",coverPath:"songList/L2.jpeg"},
+    {songName:"Creepin' - Weeknd & Metro",filePath:"songs/3.mp3",coverPath:"songList/L3.jpeg"},
+    {songName:"After Hours - Weeknd",filePath:"songs/4.mp3",coverPath:"songList/L4.jpeg"}
 ]
 
 songItems.forEach((element,i)=>{
@@ -20,6 +23,9 @@ songItems.forEach((element,i)=>{
 
 //play/pause
 masterPlay.addEventListener('click',()=>{
+    console.log("WELCOME");
+    songItems[songIndex].querySelector(".songItemPlay").classList.remove('fa-play-circle');
+    songItems[songIndex].querySelector(".songItemPlay").classList.add('fa-pause-circle');
     if(audioElement.paused|| audioElement.currentTime<=0){
         audioElement.play();
         masterPlay.classList.remove('fa-play-circle');
@@ -60,36 +66,48 @@ Array.from(document.getElementsByClassName('songItemPlay')).forEach((element)=>{
         e.target.classList.remove('fa-play-circle');
         e.target.classList.add('fa-pause-circle');
         audioElement.src=`songs/${songIndex+1}.mp3`;
+        masterSongname.innerText=songs[songIndex].songName;
+        gif.style.opacity=1;
         audioElement.currentTime=0;
         audioElement.play();
         masterPlay.classList.remove('fa-play-circle');
         masterPlay.classList.add('fa-pause-circle');
+
     })
 })
 
-document.getElementsByid('next').addEventListener('click',()=>{
-    if(songIndex>=2){
+next.addEventListener('click',()=>{
+    if(songIndex>=3){
         songIndex=0;
     }
     else{
         songIndex+=1;
     }
+    masterSongname.innerText=songs[songIndex].songName;
+    console.log("playing next song");
+    makeAllplays(); 
+    songItems[songIndex].querySelector(".songItemPlay").classList.remove('fa-play-circle');
+    songItems[songIndex].querySelector(".songItemPlay").classList.add('fa-pause-circle');
     audioElement.src=`songs/${songIndex+1}.mp3`;
     audioElement.currentTime=0;
     audioElement.play();
     masterPlay.classList.remove('fa-play-circle');
     masterPlay.classList.add('fa-pause-circle');
+    gif.style.opacity=1;
 })
-document.getElementsByid('previous').addEventListener('click',()=>{
+prev.addEventListener('click',(e)=>{
     if(songIndex<=0){
         songIndex=0;
     }
     else{
         songIndex-=1;
     }
-    audioElement.src='songs/${songIndex+1}.mp3';
+    masterSongname.innerText=songs[songIndex].songName;
+    console.log("Playing prev song");
+    audioElement.src=`songs/${songIndex+1}.mp3`;
     audioElement.currentTime=0;
     audioElement.play();
     masterPlay.classList.remove('fa-play-circle');
     masterPlay.classList.add('fa-pause-circle');
+    gif.style.opacity=1;
 })
