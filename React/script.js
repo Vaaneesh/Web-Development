@@ -11,7 +11,7 @@ import ReactDOM from 'react-dom';
 // let container = React.createElement("div", null, [heading, heading1]);
 
 const heading= (
-    <h1 id="heading" className='container'>Hello Woooooorld</h1>
+    <h1 className='container'>Hello Woooooorld</h1>
 )
 
 let F1=function(){
@@ -28,6 +28,41 @@ let htmlcode=()=>{
         </div>
     )
 }
+let Header=()=>{
+    return(
+        <div>
+            <Logo/>
+            <Navbar></Navbar>
+        </div>
+    )
+}
+let Logo=()=>{
+    return <h1>logo</h1>
+}
+let Navbar=()=>{
+    return (
+        <h1>Navbar</h1>  
+    )
+}
+let Main=()=>{
+    return(
+        <p>main body</p>
+    )
+}
+let Footer=()=>{
+    return(
+        <h1>Footer</h1>
+    )
+}
+let Pagelayout=()=>{
+    return(
+        <div>
+            <Header></Header>
+            <Main></Main>
+            <Footer></Footer>
+        </div>
+    )
+}
 
 let root=ReactDOM.createRoot(document.querySelector("#root"));
-root.render(<F1/>);
+root.render(<Pagelayout/>);
