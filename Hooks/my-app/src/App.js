@@ -1,11 +1,15 @@
-import React from 'react'
+import React, { useState } from 'react'
 
-const App = () => {
-  let searchInput="Hello";
+function App() {
+  // let searchInput="Hello";
+  let [searchInput,setSearchInput]= useState("yo");
   return (
     <div>
-      <input type="text" value={searchInput}></input>
+      <input type="text" value={searchInput} onChange={(ev)=>{
+        searchInput=ev.target.value;
+      }}></input>
       <h1>Learning Hooks</h1>
+      <h2>{searchInput}</h2>
     </div>
   )
 }
