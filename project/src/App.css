@@ -55,7 +55,9 @@
 }
 .button-complete,
 .button-delete,
-.button-edit{
+.button-edit,
+.button-up,
+.button-down{
   border: none;
   outline: none;
   cursor: pointer;
@@ -72,8 +74,20 @@
   margin-right: 10px;
 }
 .button-delete{
+  margin-right: 10px;
   color: lightblue;
 
+}
+.button-up{
+  color: #000;
+  background-color: wheat;
+  margin-right: 10px;
+  border-radius: 20px;
+}
+.button-down{
+  color: #000;
+  background-color: wheat;
+  border-radius: 20px;
 }
 .complete{
   text-decoration-style: solid;
