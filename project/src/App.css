@@ -104,7 +104,3 @@
   padding-left: 10px;
   margin-right: 15px;
 }
-input:focus,
-button:focus{
-  outline: none;
-}
